@@ -6,7 +6,7 @@
     "file",
     "sharing"
   ],
-  "repository": "https://github.com/sasinosadrano/Ruwet-File-Single",
+  "repository": "https://github.com/sasinosadrano/Ruwet-File-Multi",
   "logo": "https://telegra.ph/file/2df3529c4b93e0516216f.jpg",
   "env": {
     "TG_BOT_TOKEN": {
@@ -38,6 +38,18 @@
       "value": "-100"
     },
     "FORCE_SUB_CHANNEL": {
+      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya",
+      "value": "-100"
+    },
+    "FORCE_SUB_CHANNEL_2": {
+      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya",
+      "value": "-100"
+    },
+    "FORCE_SUB_CHANNEL_3": {
+      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya",
+      "value": "-100"
+    },
+    "FORCE_SUB_GROUP": {
       "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya",
       "value": "-100"
     },
