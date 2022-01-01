@@ -11,7 +11,7 @@ from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from bot import Bot
-from config import ADMINS, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, FORCE_MSG, START_MSG, FORCE_SUB_CHANNEL, CHANNEL_ID
+from config import ADMINS, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, FORCE_MSG, START_MSG, FORCE_SUB_CHANNEL, CHANNEL_ID, FORCE_SUB_CHANNEL_2, FORCE_SUB_CHANNEL_3
 from database.sql import add_user, full_userbase, query_msg
 from helper_func import decode, get_messages, subscribed, zeldauser
 
@@ -115,11 +115,14 @@ async def start_command(client: Client, message: Message):
                 pass
     else:
         buttons = [
-            [InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=client.invitelink)],
+            [InlineKeyboardButton("ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ", callback_data="about")],
             [
-                InlineKeyboardButton("ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ", callback_data="about"),
-                InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="close"),
+                InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪ", url=client.invitelink),
+                InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪɪ", url=client.invitelink3),
+                InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪɪɪ", url=client.invitelink4),
             ],
+            [InlineKeyboardButton("ɢʀᴏᴜᴘ", url=client.invitelink2)],
+            [InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="close")],
         ]
         await message.reply_text(
             text=START_MSG.format(
@@ -142,7 +145,12 @@ async def start_command(client: Client, message: Message):
 @Bot.on_message(filters.command("start") & filters.private)
 async def not_joined(client: Client, message: Message):
     buttons = [
-        [InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=client.invitelink)],
+        [
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪ", url=client.invitelink),
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪɪ", url=client.invitelink3),
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪɪɪ", url=client.invitelink4),
+        ],
+        [InlineKeyboardButton("ɢʀᴏᴜᴘ", url=client.invitelink2)],
     ]
     try:
         buttons.append(
