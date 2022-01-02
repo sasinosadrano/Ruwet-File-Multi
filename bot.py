@@ -12,6 +12,8 @@ from config import (
     APP_ID,
     CHANNEL_ID,
     FORCE_SUB_CHANNEL,
+    FORCE_SUB_CHANNEL_2,
+    FORCE_SUB_CHANNEL_3,
     FORCE_SUB_GROUP,
     LOGGER,
     OWNER,
